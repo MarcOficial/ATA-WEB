@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ATA - Contacto</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,34 +30,60 @@
 <section class="section alt">
   <h2>Formulario de Contacto</h2>
   <form action="https://formsubmit.co/contacto.assistenciata@gmail.com" method="POST">
-
-    <!-- Campos visibles -->
     <input type="text" name="nombre" placeholder="Tu nombre" required>
     <input type="email" name="email" placeholder="Tu correo" required>
     <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
 
-    <!-- Opciones ocultas -->
-    <input type="hidden" name="_subject" value="📩 Nuevo mensaje desde la web ATA">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://tusitio.github.io/gracias.html">
-
-    <!-- Respuesta automática -->
-    <input type="hidden" name="_autoresponse" value="Gracias por contactar con ATA. Te responderemos en breve.">
+    <!-- Checkbox obligatorio -->
+    <label style="font-size:14px; display:block; margin:10px 0;">
+      <input type="checkbox" required> He leído y acepto las Condiciones de privacidad
+    </label>
 
     <button type="submit">Enviar Mensaje</button>
+
+    <!-- Opciones ocultas FormSubmit -->
+    <input type="hidden" name="_subject" value="📩 Nuevo mensaje desde la web ATA">
+    <input type="hidden" name="_next" value="https://tudominio.github.io/gracias.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_autoresponse" value="Gracias por contactar con ATA. Te responderemos en breve.">
   </form>
 </section>
 
 <section class="section">
-  <h2>Otra Información</h2>
+  <h2>Información de Contacto</h2>
   <p><b>📧 Email:</b> contacto.assistenciata@gmail.com</p>
   <p><b>📞 Teléfono:</b> +34 600 123 456</p>
-  <p><b>📍 Dirección:</b> Inca, Mallorca</p>
+  <p><b>📍 Ubicación:</b> Inca, Mallorca</p>
+</section>
+
+<section class="section alt">
+  <h2>Encuéntranos</h2>
+  <div style="width:100%;height:400px;overflow:hidden;border-radius:10px;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.427332776909!2d2.9103903!3d39.7189516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12965123456789ab%3A0xabcdef123456789!2sInca%2C%20Mallorca!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<section class="section alt">
+  <h2>Política de Privacidad</h2>
+  <div style="font-size:12px; color:#555; text-align:justify; max-width:800px; margin:auto;">
+    <p>
+      Al enviar este formulario, aceptas que tus datos sean utilizados únicamente para responder a tu consulta. 
+      No compartiremos tu información con terceros y se conservará únicamente mientras sea necesario para dar respuesta a tu mensaje.
+    </p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2025 ATA – Todos los derechos reservados.</p>
+  <p>© 2025 ATA – Proyecto Personal. Todos los derechos reservados.</p>
+  <p>Síguenos en: 
+    <a href="https://x.com/asistenciata" target="_blank">
+      <img src="twitter-icon.png" alt="Twitter" style="height:20px; vertical-align:middle;"> @assistenciata
+    </a>
+  </p>
 </footer>
 
 </body>
