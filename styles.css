@@ -20,19 +20,19 @@ header {
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* LOGO */
 .logo-container {
-  width: 120px; /* ancho adecuado */
-  height: 50px; /* altura adecuada */
+  width: 150px;               /* ancho del logo */
+  height: 50px;               /* altura del logo */
   background-image: url('https://media.discordapp.net/attachments/1394641405762343105/1412842756874698802/logo.png?ex=68b9c3da&is=68b8725a&hm=cdbe26a9d33196141f61defb61ec6ea4864ec2829ffbb4910114612a58487439&=&format=webp&quality=lossless&width=408&height=272');
-  background-size: contain;
+  background-size: contain;    /* ajusta sin deformar */
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left center; /* alineado a la izquierda dentro del div */
 }
 
 /* MENÚ */
@@ -184,7 +184,7 @@ footer a:hover {
   color: #e63946;
 }
 
-/* BACKGROUND alternado */
+/* SECCIONES ALTERNADAS */
 .section.alt {
   background: #f0f0f0;
 }
