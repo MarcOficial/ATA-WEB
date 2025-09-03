@@ -8,7 +8,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; }
-    
+
     header {
       background: #fff;
       padding: 15px 30px;
@@ -20,17 +20,29 @@
       align-items: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo-container img { height: 50px; margin-right: 10px; }
+    .logo-container h2 { color: #e63946; }
+
     nav a { margin: 0 15px; text-decoration: none; color: #444; font-weight: bold; transition: color .3s; }
     nav a:hover { color: #e63946; }
 
     .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 100px 20px;
       background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f);
       color: #fff;
     }
-    .hero h1 { font-size: 48px; margin-bottom: 20px; }
-    .hero img { max-width: 150px; height: auto; margin-bottom: 20px; border-radius: 10px; }
+    .hero h1 { font-size: 48px; margin: 20px 0; }
+    .hero p { font-size: 20px; margin-bottom: 30px; }
+    .hero img { max-width: 150px; height: auto; border-radius: 10px; }
 
     .btn { background: #fff; color: #e63946; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: all .3s; }
     .btn:hover { background: #eee; transform: translateY(-2px); }
@@ -63,9 +75,9 @@
 <body>
 
 <header>
-  <div style="display:flex; align-items:center;">
+  <div class="logo-container">
     <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-2f28-61f8-825d-a72f3b9f7a6e/raw?se=2025-09-03T16%3A04%3A59Z&sp=r&sv=2024-08-04&sr=b&scid=561d4ae3-4dc1-50f3-9438-9f5b4558aebb&skoid=b32d65cd-c8f1-46fb-90df-c208671889d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-02T20%3A44%3A25Z&ske=2025-09-03T20%3A44%3A25Z&sks=b&skv=2024-08-04&sig=E6q1dAa3cRtRBnWxYbX2rcWPThnfxs9NW3Hkdzqb3Lk%3D" alt="Logo ATA">
-    <h2 style="color:#e63946; margin-left:10px;">ATA</h2>
+    <h2>ATA</h2>
   </div>
   <nav>
     <a href="#inicio">Inicio</a>
