@@ -1,42 +1,190 @@
-/* Reset básico */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; }
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Header y logo */
-header { background: #fff; padding: 15px 30px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: #fff;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
 .logo-container {
-  width: 200px;
-  height: 60px;
+  width: 120px; /* ancho adecuado */
+  height: 50px; /* altura adecuada */
   background-image: url('https://media.discordapp.net/attachments/1394641405762343105/1412842756874698802/logo.png?ex=68b9c3da&is=68b8725a&hm=cdbe26a9d33196141f61defb61ec6ea4864ec2829ffbb4910114612a58487439&=&format=webp&quality=lossless&width=408&height=272');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: center;
+}
+
+/* MENÚ */
+nav {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
-nav a { margin: 0 15px; text-decoration: none; color: #444; font-weight: bold; transition: color .3s; }
-nav a:hover { color: #e63946; }
 
-/* Hero */
-.hero { text-align: center; padding: 120px 20px; background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f); color: #fff; }
-.hero h1 { font-size: 48px; margin-bottom: 20px; }
-.hero p { font-size: 20px; margin-bottom: 30px; }
-.btn { background: #fff; color: #e63946; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background .3s; }
-.btn:hover { background: #eee; }
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  transition: color .3s;
+}
 
-/* Secciones */
-.section { padding: 80px 20px; text-align: center; }
-.services, .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: auto; }
-.card { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,.1); transition: transform .3s; }
-.card:hover { transform: translateY(-5px); }
+nav a:hover {
+  color: #e63946;
+}
 
-/* Footer */
-footer { background: #222; color: #fff; text-align: center; padding: 30px; margin-top: 40px; }
-footer a { color: #f4a261; margin: 0 10px; text-decoration: none; transition: color .3s; }
-footer a:hover { color: #fff; }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f);
+  color: #fff;
+}
 
-/* Formulario */
-form { max-width: 600px; margin: auto; text-align: left; }
-form input, form textarea { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; }
-form button { background: #e63946; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background .3s; }
-form button:hover { background: #c92c3a; }
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #fff;
+  color: #e63946;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .3s;
+}
+
+.btn:hover {
+  background: #eee;
+}
+
+/* SECCIONES */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* SERVICES / CARDS */
+.services, .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FORMULARIO */
+form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+form button:hover {
+  background: #c92c3a;
+}
+
+/* LISTAS EN SECCIONES */
+.section ul {
+  list-style: none;
+  line-height: 2;
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #f4a261;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* FAQ estilo */
+.faq {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+.faq h4 {
+  margin: 10px 0;
+  color: #e63946;
+}
+
+/* BACKGROUND alternado */
+.section.alt {
+  background: #f0f0f0;
+}
