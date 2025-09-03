@@ -30,6 +30,12 @@ header {
 }
 
 .logo-container {
+  width: 200px; /* ancho del logo */
+  height: 60px; /* altura del logo */
+  background-image: url('https://media.discordapp.net/attachments/1394641405762343105/1412842756874698802/logo.png?ex=68b9c3da&is=68b8725a&hm=cdbe26a9d33196141f61defb61ec6ea4864ec2829ffbb4910114612a58487439&=&format=webp&quality=lossless&width=408&height=272');
+  background-size: contain;      /* ajusta el tamaño sin deformar */
+  background-repeat: no-repeat;  /* no repetir */
+  background-position: left center; /* posición del logo */
   display: flex;
   align-items: center;
 }
