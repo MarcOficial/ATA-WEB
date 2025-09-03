@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATA - Asistencia Técnica Avanzada</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; }
+    
+    header {
+      background: #fff;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a { margin: 0 15px; text-decoration: none; color: #444; font-weight: bold; transition: color .3s; }
+    nav a:hover { color: #e63946; }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f);
+      color: #fff;
+    }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .hero img { max-width: 150px; height: auto; margin-bottom: 20px; border-radius: 10px; }
+
+    .btn { background: #fff; color: #e63946; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: all .3s; }
+    .btn:hover { background: #eee; transform: translateY(-2px); }
+
+    .section { padding: 80px 20px; text-align: center; max-width: 1200px; margin: auto; }
+    .services, .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.08);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+
+    .faq { max-width: 800px; margin: auto; text-align: left; }
+    .faq h4 { margin: 10px 0; color: #e63946; }
+
+    form { max-width: 600px; margin: auto; text-align: left; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; }
+    form button { background: #e63946; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background .3s, transform .3s; }
+    form button:hover { background: #c92c3a; transform: translateY(-2px); }
+
+    footer { background: #222; color: #fff; text-align: center; padding: 30px; margin-top: 40px; }
+    footer a { color: #f4a261; margin: 0 10px; text-decoration: none; transition: color .3s; }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex; align-items:center;">
+    <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-2f28-61f8-825d-a72f3b9f7a6e/raw?se=2025-09-03T16%3A04%3A59Z&sp=r&sv=2024-08-04&sr=b&scid=561d4ae3-4dc1-50f3-9438-9f5b4558aebb&skoid=b32d65cd-c8f1-46fb-90df-c208671889d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-02T20%3A44%3A25Z&ske=2025-09-03T20%3A44%3A25Z&sks=b&skv=2024-08-04&sig=E6q1dAa3cRtRBnWxYbX2rcWPThnfxs9NW3Hkdzqb3Lk%3D" alt="Logo ATA">
+    <h2 style="color:#e63946; margin-left:10px;">ATA</h2>
+  </div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#ventajas">Ventajas</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-2f28-61f8-825d-a72f3b9f7a6e/raw?se=2025-09-03T16%3A04%3A59Z&sp=r&sv=2024-08-04&sr=b&scid=561d4ae3-4dc1-50f3-9438-9f5b4558aebb&skoid=b32d65cd-c8f1-46fb-90df-c208671889d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-02T20%3A44%3A25Z&ske=2025-09-03T20%3A44%3A25Z&sks=b&skv=2024-08-04&sig=E6q1dAa3cRtRBnWxYbX2rcWPThnfxs9NW3Hkdzqb3Lk%3D" alt="Imagen principal ATA">
+  <h1>Bienvenido a ATA</h1>
+  <p>Asistencia Técnica Avanzada en informática y dispositivos electrónicos</p>
+  <a href="#contacto" class="btn">Contáctanos</a>
+</section>
+
+<section id="servicios" class="section">
+  <h2>Nuestros Servicios</h2>
+  <div class="services">
+    <div class="card"><h3>Reparación de PCs</h3><p>Arreglo de ordenadores de escritorio y portátiles.</p></div>
+    <div class="card"><h3>Reparación de móviles</h3><p>Solución de fallos en smartphones y tablets.</p></div>
+    <div class="card"><h3>Asistencia remota</h3><p>Soporte online para resolver problemas sin salir de casa.</p></div>
+    <div class="card"><h3>Redes e Internet</h3><p>Instalación y optimización de redes domésticas y empresariales.</p></div>
+    <div class="card"><h3>Copias de seguridad</h3><p>Protección de tus datos con backup seguro y automático.</p></div>
+    <div class="card"><h3>Optimización de sistemas</h3><p>Mejora del rendimiento y limpieza de software.</p></div>
+  </div>
+</section>
+
+<section id="nosotros" class="section" style="background:#f0f0f0;">
+  <h2>Sobre Nosotros</h2>
+  <p>En <b>ATA</b>, nuestro equipo especialista acumula más de 10 años de experiencia en tecnología. Ofrecemos soluciones rápidas, confiables y adaptadas a ti.</p>
+</section>
+
+<section id="ventajas" class="section">
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="cards">
+    <div class="card"><h3>✅ Rapidez</h3><p>Resolvemos tus problemas en el menor tiempo posible.</p></div>
+    <div class="card"><h3>✅ Profesionalidad</h3><p>Equipo certificado y con experiencia.</p></div>
+    <div class="card"><h3>✅ Atención personalizada</h3><p>Tú eres nuestra prioridad en cada paso.</p></div>
+    <div class="card"><h3>✅ Precios accesibles</h3><p>Calidad sin vaciar tu bolsillo.</p></div>
+  </div>
+</section>
+
+<section id="testimonios" class="section" style="background:#f0f0f0;">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="cards">
+    <div class="card"><p>"Me arreglaron el portátil en un día. Excelente servicio!"</p><b>- María G.</b></div>
+    <div class="card"><p>"Muy profesionales, recuperaron todos mis datos. Recomendados."</p><b>- Juan P.</b></div>
+    <div class="card"><p>"Atención rápida y amable, arreglaron mi móvil a buen precio."</p><b>- Laura R.</b></div>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <h2>Preguntas Frecuentes</h2>
+  <div class="faq">
+    <h4>¿Cuánto tarda una reparación?</h4><p>Depende del problema, pero la mayoría se completa en 24‑48h.</p>
+    <h4>¿Ofrecen garantía?</h4><p>Sí, todas nuestras reparaciones tienen mínimo 3 meses de garantía.</p>
+    <h4>¿Atienden a domicilio?</h4><p>Sí, contamos con servicio técnico a domicilio.</p>
+  </div>
+</section>
+
+<section id="contacto" class="section" style="background:#f0f0f0;">
+  <h2>Contacto</h2>
+  <p>Escríbenos:</p>
+  <form action="https://formsubmit.co/contacto.assistenciata@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+    <button type="submit">Enviar Mensaje</button>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+  </form>
+  <p style="margin-top:20px;">📧 contacto@ata.com | 📞 +34 600 123 456</p>
+</section>
+
+<footer>
+  <p>© 2025 ATA – Asistencia Técnica Avanzada. Todos los derechos reservados.</p>
+  <p>Síguenos en: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+</footer>
+
+</body>
+</html>
