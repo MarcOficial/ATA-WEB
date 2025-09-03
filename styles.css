@@ -1,177 +1,42 @@
-/* Reset y base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header {
-  background: #fff;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
+/* Header y logo */
+header { background: #fff; padding: 15px 30px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 .logo-container {
-  width: 200px; /* ancho del logo */
-  height: 60px; /* altura del logo */
+  width: 200px;
+  height: 60px;
   background-image: url('https://media.discordapp.net/attachments/1394641405762343105/1412842756874698802/logo.png?ex=68b9c3da&is=68b8725a&hm=cdbe26a9d33196141f61defb61ec6ea4864ec2829ffbb4910114612a58487439&=&format=webp&quality=lossless&width=408&height=272');
-  background-size: contain;      /* ajusta el tamaño sin deformar */
-  background-repeat: no-repeat;  /* no repetir */
-  background-position: left center; /* posición del logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
   display: flex;
   align-items: center;
 }
-
-.logo-container img {
-  height: 60px;
-  width: auto;
-  margin-right: 10px;
-}
-
-nav a {
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #e63946;
-}
+nav a { margin: 0 15px; text-decoration: none; color: #444; font-weight: bold; transition: color .3s; }
+nav a:hover { color: #e63946; }
 
 /* Hero */
-.hero {
-  text-align: center;
-  padding: 150px 20px;
-  background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f);
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  max-width: 700px;
-  margin: 0 auto 30px;
-}
-
-.btn {
-  background: #fff;
-  color: #e63946;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #eee;
-}
+.hero { text-align: center; padding: 120px 20px; background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f); color: #fff; }
+.hero h1 { font-size: 48px; margin-bottom: 20px; }
+.hero p { font-size: 20px; margin-bottom: 30px; }
+.btn { background: #fff; color: #e63946; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background .3s; }
+.btn:hover { background: #eee; }
 
 /* Secciones */
-.section {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.cards, .services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 280px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Formulario */
-form {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-form button {
-  background: #e63946;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background: #c92c3a;
-}
+.section { padding: 80px 20px; text-align: center; }
+.services, .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: auto; }
+.card { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,.1); transition: transform .3s; }
+.card:hover { transform: translateY(-5px); }
 
 /* Footer */
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
+footer { background: #222; color: #fff; text-align: center; padding: 30px; margin-top: 40px; }
+footer a { color: #f4a261; margin: 0 10px; text-decoration: none; transition: color .3s; }
+footer a:hover { color: #fff; }
 
-footer a {
-  color: #f4a261;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-footer a:hover {
-  color: #fff;
-}
-
-/* FAQ */
-.faq {
-  max-width: 800px;
-  margin: auto;
-  text-align: left;
-}
-
-.faq h4 {
-  margin: 15px 0 5px;
-  color: #e63946;
-}
+/* Formulario */
+form { max-width: 600px; margin: auto; text-align: left; }
+form input, form textarea { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; }
+form button { background: #e63946; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background .3s; }
+form button:hover { background: #c92c3a; }
