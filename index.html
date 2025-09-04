@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATA - Inicio</title>
+  <title>ATA - Innovación Tecnológica</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,10 +23,74 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
-      <h1>Bienvenido a ATA</h1>
-      <p>La mejor solución para tus necesidades.</p>
-      <a href="contacto.html" class="btn-primary">Contáctanos</a>
+      <h1>Innovación tecnológica a tu alcance</h1>
+      <p>Desarrollamos soluciones inteligentes para empresas y particulares.</p>
+      <a href="#contacto" class="btn-primary">Contáctanos</a>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section">
+      <h2>Nuestros Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Consultoría Tecnológica</h3>
+          <p>Optimizamos tus sistemas y procesos con soluciones inteligentes.</p>
+        </div>
+        <div class="card">
+          <h3>Desarrollo de Software</h3>
+          <p>Aplicaciones personalizadas adaptadas a tus necesidades.</p>
+        </div>
+        <div class="card">
+          <h3>Soporte Técnico</h3>
+          <p>Asistencia profesional rápida y eficiente.</p>
+        </div>
+        <div class="card">
+          <h3>Optimización de Sistemas</h3>
+          <p>Mejora de rendimiento, seguridad y productividad de tus sistemas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ventajas -->
+    <section class="section alt">
+      <h2>Por qué elegir ATA</h2>
+      <ul class="advantages">
+        <li>Soluciones innovadoras</li>
+        <li>Atención personalizada</li>
+        <li>Precios competitivos</li>
+        <li>Soporte continuo</li>
+      </ul>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section">
+      <h2>Testimonios</h2>
+      <div class="testimonial">
+        <p>"Excelente servicio y atención personalizada."</p>
+        <span>- Juan Pérez</span>
+      </div>
+      <div class="testimonial">
+        <p>"ATA nos ayudó a optimizar nuestros sistemas de manera increíble."</p>
+        <span>- María López</span>
+      </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section class="section alt" id="contacto">
+      <h2>Formulario de Contacto</h2>
+      <form action="https://formsubmit.co/contacto.assistenciata@gmail.com" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+
+        <label style="font-size:14px; display:block; margin:10px 0;">
+          <input type="checkbox" required> He leído y acepto las Condiciones de privacidad
+        </label>
+
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
     </section>
   </main>
 
