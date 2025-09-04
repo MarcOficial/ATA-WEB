@@ -10,7 +10,7 @@
 
   <!-- Banner de cookies -->
   <div id="cookie-banner">
-    <p>Usamos cookies para mejorar tu experiencia en nuestra web. Al continuar navegando, aceptas nuestra <a href="#" class="cookie-link">política de cookies</a>.</p>
+    <p>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <a href="#" class="cookie-link">política de cookies</a>.</p>
     <button id="accept-cookies">Aceptar</button>
   </div>
 
@@ -20,40 +20,40 @@
 
   <main class="main-centered">
 
-    <!-- Hero centrado con estilo tecnológico -->
-    <section class="hero-centered">
-      <h1>Innovación tecnológica a tu alcance</h1>
-      <p>Soluciones inteligentes y adaptadas a tus necesidades empresariales y personales.</p>
-      <a href="#contacto" class="btn-primary">Contáctanos</a>
-      <div class="hero-light"></div>
+    <!-- Hero futurista -->
+    <section class="hero-neon">
+      <h1 class="neon-text">Innovación tecnológica a tu alcance</h1>
+      <p class="neon-subtext">Soluciones inteligentes y adaptadas a tus necesidades empresariales y personales.</p>
+      <a href="#contacto" class="btn-neon">Contáctanos</a>
+      <div class="hero-glow"></div>
     </section>
 
-    <!-- Servicios centrados -->
+    <!-- Servicios -->
     <section class="section-centered">
-      <h2>Nuestros Servicios</h2>
+      <h2 class="neon-text">Nuestros Servicios</h2>
       <div class="cards-centered">
-        <div class="card">
+        <div class="card-neon">
           <h3>Consultoría Tecnológica</h3>
           <p>Optimización de sistemas y procesos.</p>
         </div>
-        <div class="card">
+        <div class="card-neon">
           <h3>Desarrollo de Software</h3>
           <p>Aplicaciones personalizadas.</p>
         </div>
-        <div class="card">
+        <div class="card-neon">
           <h3>Soporte Técnico</h3>
           <p>Asistencia profesional eficiente.</p>
         </div>
-        <div class="card">
+        <div class="card-neon">
           <h3>Optimización de Sistemas</h3>
           <p>Mejora del rendimiento y seguridad.</p>
         </div>
       </div>
     </section>
 
-    <!-- Ventajas centradas -->
+    <!-- Ventajas -->
     <section class="section-centered alt">
-      <h2>Por qué elegirnos</h2>
+      <h2 class="neon-text">Por qué elegirnos</h2>
       <ul class="advantages-centered">
         <li>Soluciones innovadoras</li>
         <li>Atención personalizada</li>
@@ -62,28 +62,28 @@
       </ul>
     </section>
 
-    <!-- Testimonios centrados -->
+    <!-- Testimonios -->
     <section class="section-centered">
-      <h2>Testimonios</h2>
+      <h2 class="neon-text">Testimonios</h2>
       <div class="testimonial-grid-centered">
-        <div class="testimonial">
+        <div class="card-neon">
           <p>"Excelente servicio y atención personalizada."</p>
           <span>- Juan Pérez</span>
         </div>
-        <div class="testimonial">
+        <div class="card-neon">
           <p>"ATA nos ayudó a digitalizar nuestros procesos."</p>
           <span>- María López</span>
         </div>
-        <div class="testimonial">
+        <div class="card-neon">
           <p>"El equipo es muy profesional y siempre disponible."</p>
           <span>- Carlos Martínez</span>
         </div>
       </div>
     </section>
 
-    <!-- Formulario centrado -->
+    <!-- Formulario -->
     <section class="section-centered alt" id="contacto">
-      <h2>Contacto</h2>
+      <h2 class="neon-text">Contacto</h2>
       <form action="https://formsubmit.co/contacto.assistenciata@gmail.com" method="POST" class="contact-form-centered">
         <input type="text" name="nombre" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu correo" required>
@@ -91,7 +91,7 @@
         <label>
           <input type="checkbox" required> He leído y acepto las Condiciones de privacidad
         </label>
-        <button type="submit" class="btn-primary">Enviar</button>
+        <button type="submit" class="btn-neon">Enviar</button>
       </form>
     </section>
 
@@ -101,20 +101,15 @@
     <p>&copy; 2025 ATA. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Script para cookies -->
+  <!-- Script cookies -->
   <script>
     const banner = document.getElementById('cookie-banner');
     const button = document.getElementById('accept-cookies');
-
-    if (!localStorage.getItem('cookiesAccepted')) {
-      banner.style.display = 'flex';
-    }
-
+    if (!localStorage.getItem('cookiesAccepted')) banner.style.display = 'flex';
     button.addEventListener('click', () => {
       localStorage.setItem('cookiesAccepted', 'true');
       banner.style.display = 'none';
     });
   </script>
-
 </body>
 </html>
