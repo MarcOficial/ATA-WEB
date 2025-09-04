@@ -9,53 +9,43 @@
 <body>
   <header>
     <div class="logo-container"></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="ventajas.html">Ventajas</a></li>
-        <li><a href="testimonios.html">Testimonios</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
+  <main class="main-centered">
+
     <!-- Hero centrado -->
     <section class="hero-centered">
-      <img src="https://media.discordapp.net/attachments/1394641405762343105/1412842756874698802/logo.png" alt="ATA Logo" class="hero-logo">
+      <img src="logo.png" alt="ATA Logo" class="hero-logo">
       <h1>Innovación tecnológica a tu alcance</h1>
       <p>Soluciones inteligentes y adaptadas a tus necesidades empresariales y personales.</p>
       <a href="#contacto" class="btn-primary">Contáctanos</a>
     </section>
 
     <!-- Servicios centrados -->
-    <section class="section">
+    <section class="section-centered">
       <h2>Nuestros Servicios</h2>
       <div class="cards-centered">
         <div class="card">
           <h3>Consultoría Tecnológica</h3>
-          <p>Optimización de sistemas y procesos con soluciones inteligentes.</p>
+          <p>Optimización de sistemas y procesos.</p>
         </div>
         <div class="card">
           <h3>Desarrollo de Software</h3>
-          <p>Aplicaciones personalizadas adaptadas a tus necesidades.</p>
+          <p>Aplicaciones personalizadas.</p>
         </div>
         <div class="card">
           <h3>Soporte Técnico</h3>
-          <p>Asistencia profesional rápida y eficiente.</p>
+          <p>Asistencia profesional eficiente.</p>
         </div>
         <div class="card">
           <h3>Optimización de Sistemas</h3>
-          <p>Mejora del rendimiento y seguridad de tus sistemas.</p>
+          <p>Mejora del rendimiento y seguridad.</p>
         </div>
       </div>
     </section>
 
     <!-- Ventajas centradas -->
-    <section class="section alt">
+    <section class="section-centered alt">
       <h2>Por qué elegirnos</h2>
       <ul class="advantages-centered">
         <li>Soluciones innovadoras</li>
@@ -66,39 +56,38 @@
     </section>
 
     <!-- Testimonios centrados -->
-    <section class="section">
+    <section class="section-centered">
       <h2>Testimonios</h2>
       <div class="testimonial-grid-centered">
         <div class="testimonial">
-          <p>"Excelente servicio y atención personalizada. Recomiendo ATA al 100%."</p>
+          <p>"Excelente servicio y atención personalizada."</p>
           <span>- Juan Pérez</span>
         </div>
         <div class="testimonial">
-          <p>"ATA nos ayudó a digitalizar nuestros procesos y mejorar la eficiencia."</p>
+          <p>"ATA nos ayudó a digitalizar nuestros procesos."</p>
           <span>- María López</span>
         </div>
         <div class="testimonial">
-          <p>"El equipo es muy profesional y siempre disponible para cualquier problema."</p>
+          <p>"El equipo es muy profesional y siempre disponible."</p>
           <span>- Carlos Martínez</span>
         </div>
       </div>
     </section>
 
     <!-- Formulario centrado -->
-    <section class="section alt" id="contacto">
-      <h2>Formulario de Contacto</h2>
+    <section class="section-centered alt" id="contacto">
+      <h2>Contacto</h2>
       <form action="https://formsubmit.co/contacto.assistenciata@gmail.com" method="POST" class="contact-form-centered">
         <input type="text" name="nombre" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu correo" required>
         <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
-
         <label>
           <input type="checkbox" required> He leído y acepto las Condiciones de privacidad
         </label>
-
         <button type="submit" class="btn-primary">Enviar</button>
       </form>
     </section>
+
   </main>
 
   <footer>
