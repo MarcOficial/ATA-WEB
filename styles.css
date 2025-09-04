@@ -3,8 +3,8 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f6fa;
-  color: #333;
+  background-color: #0a0f28; /* Fondo oscuro tecnológico */
+  color: #fff;
   text-align: center;
 }
 
@@ -33,24 +33,46 @@ header {
   padding: 50px 20px;
 }
 
-/* Hero centrado solo texto */
+/* Hero centrado con glow */
 .hero-centered {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 120px 20px;
+  background: linear-gradient(135deg, #0d6efd, #3b82f6);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(13,110,253,0.6);
 }
 
 .hero-centered h1 {
   font-size: 3.5rem;
   font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #0d6efd;
 }
 
 .hero-centered p {
   font-size: 1.5rem;
   max-width: 800px;
   line-height: 1.5;
+  color: #e0e0ff;
+  text-shadow: 0 0 5px #fff;
+}
+
+/* Luz brillante detrás del hero */
+.hero-light {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(13,110,253,0.2) 70%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(80px);
+  z-index: 0;
 }
 
 /* Botón */
@@ -61,11 +83,15 @@ header {
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  box-shadow: 0 0 20px #0d6efd, 0 0 40px #0d6efd inset;
   transition: 0.3s;
+  z-index: 1;
+  position: relative;
 }
 
 .btn-primary:hover {
   background-color: #084298;
+  box-shadow: 0 0 30px #3b82f6, 0 0 60px #3b82f6 inset;
 }
 
 /* Secciones centradas */
@@ -78,10 +104,12 @@ header {
 }
 
 .section-centered.alt {
-  background-color: #f1f1f1;
+  background-color: #0f142a;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(13,110,253,0.4);
 }
 
-/* Cards centradas */
+/* Cards centradas con glow */
 .cards-centered {
   display: flex;
   flex-wrap: wrap;
@@ -91,12 +119,17 @@ header {
 }
 
 .card {
-  background: #fff;
+  background: #1b1f44;
   padding: 25px;
   border-radius: 15px;
   width: 250px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(13,110,253,0.5);
   text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 40px rgba(13,110,253,0.8);
 }
 
 /* Ventajas centradas */
@@ -116,6 +149,12 @@ header {
   padding: 15px 25px;
   border-radius: 10px;
   font-weight: bold;
+  box-shadow: 0 0 15px #0d6efd;
+  transition: 0.3s;
+}
+
+.advantages-centered li:hover {
+  box-shadow: 0 0 30px #3b82f6;
 }
 
 /* Testimonios centrados */
@@ -128,12 +167,17 @@ header {
 }
 
 .testimonial {
-  background: #fff;
+  background: #1b1f44;
   padding: 25px;
   border-radius: 15px;
   width: 250px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(13,110,253,0.5);
   text-align: center;
+  transition: 0.3s;
+}
+
+.testimonial:hover {
+  box-shadow: 0 0 40px rgba(13,110,253,0.8);
 }
 
 /* Formulario centrado */
@@ -151,10 +195,13 @@ input, textarea {
   border: 1px solid #ccc;
   font-size: 1rem;
   width: 100%;
+  background: #1b1f44;
+  color: #fff;
+  border: 1px solid #0d6efd;
 }
 
 input:focus, textarea:focus {
-  border-color: #0d6efd;
+  border-color: #3b82f6;
   outline: none;
 }
 
