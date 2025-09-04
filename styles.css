@@ -1,11 +1,12 @@
 /* Reset y tipografía */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0a0f28; /* Fondo oscuro tecnológico */
+  background-color: #0a0f28;
   color: #fff;
   text-align: center;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -18,80 +19,77 @@ header {
   width: 150px;
   height: 50px;
   margin: 0 auto;
-  background-image: url('logo.png'); /* Logo en header */
+  background-image: url('logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* Main centrado */
-.main-centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  padding: 50px 20px;
-}
-
-/* Hero centrado con glow */
-.hero-centered {
+/* Hero futurista */
+.hero-neon {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 120px 20px;
-  background: linear-gradient(135deg, #0d6efd, #3b82f6);
+  background: radial-gradient(circle at top, #0d6efd, #1a1a4b);
+  overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 0 50px rgba(13,110,253,0.6);
+  box-shadow: 0 0 50px #0d6efd, 0 0 100px #3b82f6 inset;
 }
 
-.hero-centered h1 {
+.neon-text {
   font-size: 3.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #0d6efd;
+  color: #0d6efd;
+  text-shadow:
+    0 0 5px #0d6efd,
+    0 0 10px #0d6efd,
+    0 0 20px #3b82f6,
+    0 0 40px #3b82f6,
+    0 0 80px #3b82f6;
 }
 
-.hero-centered p {
+.neon-subtext {
   font-size: 1.5rem;
-  max-width: 800px;
-  line-height: 1.5;
-  color: #e0e0ff;
-  text-shadow: 0 0 5px #fff;
+  color: #a0c4ff;
+  text-shadow: 0 0 5px #0d6efd, 0 0 10px #3b82f6;
 }
 
-/* Luz brillante detrás del hero */
-.hero-light {
+/* Glow animado detrás del hero */
+.hero-glow {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(13,110,253,0.2) 70%);
-  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(13,110,253,0.5) 0%, rgba(13,110,253,0) 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: blur(80px);
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: pulse 3s infinite alternate;
   z-index: 0;
 }
 
-/* Botón */
-.btn-primary {
-  padding: 15px 40px;
-  background-color: #0d6efd;
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 20px #0d6efd, 0 0 40px #0d6efd inset;
-  transition: 0.3s;
-  z-index: 1;
-  position: relative;
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
 }
 
-.btn-primary:hover {
-  background-color: #084298;
-  box-shadow: 0 0 30px #3b82f6, 0 0 60px #3b82f6 inset;
+/* Botón neón */
+.btn-neon {
+  padding: 15px 40px;
+  color: #0d6efd;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #0d6efd, 0 0 20px #3b82f6 inset, 0 0 40px #0d6efd;
+  transition: 0.3s;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 20px #0d6efd, 0 0 40px #3b82f6 inset, 0 0 80px #3b82f6;
 }
 
 /* Secciones centradas */
@@ -103,13 +101,14 @@ header {
   padding: 50px 20px;
 }
 
+/* Sección alternativa con glow */
 .section-centered.alt {
   background-color: #0f142a;
   border-radius: 15px;
-  box-shadow: 0 0 30px rgba(13,110,253,0.4);
+  box-shadow: 0 0 50px #0d6efd;
 }
 
-/* Cards centradas con glow */
+/* Cards neón */
 .cards-centered {
   display: flex;
   flex-wrap: wrap;
@@ -118,18 +117,18 @@ header {
   margin-top: 20px;
 }
 
-.card {
+.card-neon {
   background: #1b1f44;
   padding: 25px;
   border-radius: 15px;
   width: 250px;
-  box-shadow: 0 0 20px rgba(13,110,253,0.5);
+  box-shadow: 0 0 20px #0d6efd, 0 0 40px #3b82f6 inset;
   text-align: center;
   transition: 0.3s;
 }
 
-.card:hover {
-  box-shadow: 0 0 40px rgba(13,110,253,0.8);
+.card-neon:hover {
+  box-shadow: 0 0 40px #0d6efd, 0 0 80px #3b82f6 inset;
 }
 
 /* Ventajas centradas */
@@ -149,38 +148,15 @@ header {
   padding: 15px 25px;
   border-radius: 10px;
   font-weight: bold;
-  box-shadow: 0 0 15px #0d6efd;
+  box-shadow: 0 0 15px #0d6efd, 0 0 30px #3b82f6 inset;
   transition: 0.3s;
 }
 
 .advantages-centered li:hover {
-  box-shadow: 0 0 30px #3b82f6;
+  box-shadow: 0 0 30px #0d6efd, 0 0 60px #3b82f6 inset;
 }
 
-/* Testimonios centrados */
-.testimonial-grid-centered {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.testimonial {
-  background: #1b1f44;
-  padding: 25px;
-  border-radius: 15px;
-  width: 250px;
-  box-shadow: 0 0 20px rgba(13,110,253,0.5);
-  text-align: center;
-  transition: 0.3s;
-}
-
-.testimonial:hover {
-  box-shadow: 0 0 40px rgba(13,110,253,0.8);
-}
-
-/* Formulario centrado */
+/* Formulario */
 .contact-form-centered {
   display: flex;
   flex-direction: column;
@@ -197,6 +173,7 @@ input, textarea {
   width: 100%;
   background: #1b1f44;
   color: #fff;
+  box-shadow: 0 0 10px #0d6efd inset;
 }
 
 input:focus, textarea:focus {
@@ -210,6 +187,7 @@ footer {
   background-color: #0d6efd;
   color: #fff;
   margin-top: 50px;
+  box-shadow: 0 0 20px #0d6efd;
 }
 
 /* Banner de cookies */
@@ -222,8 +200,8 @@ footer {
   color: #fff;
   padding: 20px 30px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(13,110,253,0.6);
-  display: none; /* Se activa con JS */
+  box-shadow: 0 0 20px #0d6efd;
+  display: none;
   align-items: center;
   gap: 20px;
   z-index: 1000;
