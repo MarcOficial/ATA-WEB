@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner">
+    <p>Usamos cookies para mejorar tu experiencia en nuestra web. Al continuar navegando, aceptas nuestra <a href="#" class="cookie-link">política de cookies</a>.</p>
+    <button id="accept-cookies">Aceptar</button>
+  </div>
+
   <header>
     <div class="logo-container"></div>
   </header>
@@ -18,7 +25,7 @@
       <h1>Innovación tecnológica a tu alcance</h1>
       <p>Soluciones inteligentes y adaptadas a tus necesidades empresariales y personales.</p>
       <a href="#contacto" class="btn-primary">Contáctanos</a>
-      <div class="hero-light"></div> <!-- Luz brillante detrás -->
+      <div class="hero-light"></div>
     </section>
 
     <!-- Servicios centrados -->
@@ -93,5 +100,21 @@
   <footer>
     <p>&copy; 2025 ATA. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Script para cookies -->
+  <script>
+    const banner = document.getElementById('cookie-banner');
+    const button = document.getElementById('accept-cookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+      banner.style.display = 'flex';
+    }
+
+    button.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      banner.style.display = 'none';
+    });
+  </script>
+
 </body>
 </html>
