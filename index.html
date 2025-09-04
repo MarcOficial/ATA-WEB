@@ -3,105 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATA - Inicio</title>
-  <link rel="icon" href="Logo.ico" type="image/x-icon
-  <link rel="stylesheet" href= "style.css">
+  <title>ATA - Asistencia Técnica Avanzada</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="Logo.ico">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+    header { background: #fff; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    nav a { margin: 0 15px; text-decoration: none; color: #444; font-weight: bold; }
+    nav a:hover { color: #e63946; }
+    .hero { text-align: center; padding: 100px 20px; background: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f); color: #fff; }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .hero p { font-size: 20px; }
+    .hero a { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #fff; color: #e63946; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    .hero a:hover { background: #444; color: #fff; }
+    .section { padding: 60px 20px; text-align: center; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: auto; }
+    .card { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { color: #e63946; }
+    footer { background: #222; color: #fff; text-align: center; padding: 30px; margin-top: 40px; }
+    footer a { color: #f4a261; margin: 0 10px; text-decoration: none; }
+    footer a:hover { color: #fff; }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-container"></div>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="ventajas.html">Ventajas</a>
-    <a href="testimonios.html">Testimonios</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-</header>
-  
-<!-- Hero -->
-<section id="inicio" class="hero">
-  <h1>Bienvenido a ATA</h1>
-  <p>Asistencia técnica avanzada en PCs, móviles y tablets | Soporte remoto y presencial</p>
-  <a href="contacto.html" class="btn">Contáctanos</a>
-</section>
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-2f28-61f8-825d-a72f3b9f7a6e/raw?se=2025-09-03T16%3A04%3A59Z&sp=r&sv=2024-08-04&sr=b&scid=561d4ae3-4dc1-50f3-9438-9f5b4558aebb&skoid=b32d65cd-c8f1-46fb-90df-c208671889d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-02T20%3A44%3A25Z&ske=2025-09-03T20%3A44%3A25Z&sks=b&skv=2024-08-04&sig=E6q1dAa3cRtRBnWxYbX2rcWPThnfxs9NW3Hkdzqb3Lk%3D" alt="ATA Logo" style="height:50px; margin-right:10px;">
+      <h2 style="color:#e63946;">ATA</h2>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-<!-- Servicios destacados -->
-<section class="section">
-  <h2>Nuestros Servicios</h2>
-  <div class="services">
-    <div class="card"><h3>Reparación de PCs</h3><p>Reparamos ordenadores y portátiles de manera rápida y segura.</p></div>
-    <div class="card"><h3>Reparación de móviles</h3><p>Solucionamos fallos de smartphones y tablets de todas las marcas.</p></div>
-    <div class="card"><h3>Asistencia remota</h3><p>Soporte online sin necesidad de desplazarte.</p></div>
-    <div class="card"><h3>Redes e Internet</h3><p>Configuración y optimización de redes domésticas y empresariales.</p></div>
-  </div>
-  <a href="servicios.html" class="btn">Ver todos los servicios</a>
-</section>
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a ATA</h1>
+    <p>Asistencia Técnica Avanzada en informática y dispositivos electrónicos</p>
+    <a href="#contacto">📩 Contáctanos</a>
+  </section>
 
-<!-- Ventajas -->
-<section class="section alt">
-  <h2>¿Por qué elegirnos?</h2>
-  <div class="cards">
-    <div class="card"><h3>✅ Rapidez</h3><p>Resolución de problemas en el menor tiempo posible.</p></div>
-    <div class="card"><h3>✅ Profesionalidad</h3><p>Equipo con experiencia y conocimientos certificados.</p></div>
-    <div class="card"><h3>✅ Atención personalizada</h3><p>Cuidamos cada detalle de tu consulta o reparación.</p></div>
-    <div class="card"><h3>✅ Precios accesibles</h3><p>Calidad profesional sin vaciar tu bolsillo.</p></div>
-  </div>
-  <a href="ventajas.html" class="btn">Ver más ventajas</a>
-</section>
+  <section id="servicios" class="section">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+      <div class="card"><h3>🖥 Reparación de PCs</h3><p>Arreglo de ordenadores de escritorio y portátiles.</p></div>
+      <div class="card"><h3>📱 Reparación de móviles</h3><p>Solución de fallos en smartphones y tablets.</p></div>
+      <div class="card"><h3>🌐 Asistencia remota</h3><p>Soporte online para resolver problemas sin salir de casa.</p></div>
+      <div class="card"><h3>🔧 Mantenimiento preventivo</h3><p>Optimización y limpieza de sistemas para un mejor rendimiento.</p></div>
+      <div class="card"><h3>☁️ Copias de seguridad</h3><p>Instalación y configuración de backups automáticos.</p></div>
+      <div class="card"><h3>🛡 Seguridad informática</h3><p>Protección contra virus y configuración de firewalls.</p></div>
+    </div>
+  </section>
 
-<!-- Testimonios -->
-<section class="section">
-  <h2>Lo que dicen nuestros clientes</h2>
-  <div class="cards">
-    <div class="card"><p>"Me arreglaron el portátil en un día. Excelente servicio!"</p><b>- María G.</b></div>
-    <div class="card"><p>"Muy profesionales, recuperaron todos mis datos. Recomendados."</p><b>- Juan P.</b></div>
-    <div class="card"><p>"Atención rápida y amable, arreglaron mi móvil a buen precio."</p><b>- Laura R.</b></div>
-  </div>
-  <a href="testimonios.html" class="btn">Más testimonios</a>
-</section>
+  <section id="nosotros" class="section" style="background:#f0f0f0;">
+    <h2>Sobre Nosotros</h2>
+    <p>En <b>ATA</b> ofrecemos soluciones rápidas y efectivas en asistencia técnica. Nuestro objetivo es que tus dispositivos funcionen siempre al máximo rendimiento.</p>
+    <p>Contamos con técnicos especializados en informática, telefonía y redes.</p>
+  </section>
 
-<!-- FAQ breve -->
-<section class="section alt">
-  <h2>Preguntas frecuentes</h2>
-  <div class="faq">
-    <h4>¿Cuánto tarda una reparación?</h4>
-    <p>Depende del problema, pero la mayoría se completa en 24‑48h.</p>
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>📧 <a href="mailto:contacto@ata.com">contacto@ata.com</a></p>
+    <p>📞 +34 600 123 456</p>
+    <p>📍 Inca, Mallorca, España</p>
+  </section>
 
-    <h4>¿Ofrecen garantía?</h4>
-    <p>Sí, todas nuestras reparaciones tienen mínimo 3 meses de garantía.</p>
-
-    <h4>¿Atienden a domicilio?</h4>
-    <p>Sí, contamos con servicio técnico a domicilio.</p>
-  </div>
-  <a href="faq.html" class="btn">Ver todas las preguntas</a>
-</section>
-
-<!-- Contacto rápido -->
-<section class="section">
-  <h2>¿Tienes alguna consulta?</h2>
-  <p>Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
-  <a href="contacto.html" class="btn">Contactar ahora</a>
-</section>
-
-<footer>
-  <p>© 2025 ATA – Proyecto Personal. Todos los derechos reservados.</p>
-  <p>Síguenos en: 
-    <a href="https://x.com/asistenciata" target="_blank">
-      <img src="twitter-icon.png" alt="Twitter" style="height:20px; vertical-align:middle;"> @assistenciata
-    </a>
-  </p>
-</footer>
-
-<!-- Forzar scroll al inicio -->
-<script>
-  window.onload = function() {
-    window.scrollTo(0, 0);
-  };
-</script>
+  <footer>
+    <p>© 2025 ATA - Asistencia Técnica Avanzada. Todos los derechos reservados.</p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">WhatsApp</a>
+    </p>
+  </footer>
 
 </body>
 </html>
